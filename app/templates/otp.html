@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-5 pt-4">
+    {% if message %}
+        <div class="alert alert-{{class}}">
+            {{message}}
+        </div>
+    {% endif %}
+    <form action="" class="mt-2" method="post">
+        {% csrf_token %}
+        <div class="row">
+            <center>
+                <div class="col-sm-6">
+                    <h6 class="text-center alert alert-info">Enter OTP send to your otp {{mobile}}</h6>
+                    <input type="text" placeholder="enter otp" class="form-control" name="otp">
+                </div>
+            </center>
+        </div>
+        <p>Don't have an account <a href="{% url 'registration' %}">Register</a></p>
+        <button class="btn btn-floating btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock content %}

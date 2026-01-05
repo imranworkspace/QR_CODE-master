@@ -1,0 +1,38 @@
+{% extends 'base_no_header.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+      <center>
+        <div class="col-sm-4 mt-4 mb-2 ml-2 mr-2">
+          <form action="{% url 'login_page' %}" method="post" novalidate> 
+                
+                <img src="{% static 'images/lock.png' %}" alt="" width="250px" height="250px">
+                <p>Password Protected Page<br>Enter Password 2 Continue</p>
+                
+                <div>
+                  {% if message %}
+                      <div class="alert alert-{{class}}">
+                          {{message}}
+                      </div>
+                  {% endif %}
+                </div>
+                {% csrf_token %}
+                {{form.as_p}}
+                <center>
+                  <input type="submit" class="btn btn-floating btn-success btn-sm text-white" value="Login">
+                  <a href="{% url 'forgot' %}" class="btn btn-danger text-white btn-sm">Forgot Password?</a>
+                </center>    
+          </form>
+        </div> 
+      </center>
+      <!-- divide        -->
+      <!-- <div class="col-sm-4">
+        <img src="{% static 'images/novetrics_logo.jpg' %}" alt="novetrics" width="350px" height="350px">
+      </div> -->
+    </div>
+</div>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+{% endblock content %}

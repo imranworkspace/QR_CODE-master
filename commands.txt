@@ -1,0 +1,4 @@
+docker build --tag qr_project .
+docker run --publish 8000:8000 qr_project
+
+

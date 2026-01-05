@@ -1,0 +1,53 @@
+1.for form divide       - https://www.youtube.com/watch?v=OPc_oMgjhpM
+2.for search            - https://www.youtube.com/watch?v=iFlSrEuyl8I
+3.for pagination        - https://www.youtube.com/watch?v=CV_t_dHFXzc
+4.for filters           - https://youtu.be/G-Rct7Na0UQ
+
+5.local variable 'context' referenced before assignment - https://www.youtube.com/watch?v=rWFZymiK89c
+
+6.requirnment.txt       - https://stackoverflow.com/questions/31684375/automatically-create-requirements-txt
+
+7.heroku deploy         - https://www.youtube.com/watch?v=kBwhtEIXGII
+
+9.pass & cpass form validation - https://stackoverflow.com/questions/57852131/custom-registration-form-confirm-password
+
+10.email for sms4india.com 
+
+11.disable model-field in update page - https://stackoverflow.com/questions/55506000/syntax-for-disabling-all-form-fields-in-django
+
+12- convert queryset to integer = https://stackoverflow.com/questions/34708046/django-query-isnt-returning-id-value-as-an-integer
+ex :- id = AdminModel.objects.get(name=username_f).pk
+
+13- load image  - https://stackoverflow.com/questions/39769469/the-way-to-use-background-image-in-css-files-with-django
+
+14 - active boostrap navbar items - https://youtu.be/e_D_hoJ1kAc
+
+15 - offline font awesome libray uses - https://youtu.be/3I3Og_RPIE4
+
+16- font awesome navigation icon with title - https://youtu.be/_uQ_ye291VY
+
+17- Reverse for 'edit_post' with arguments '('',)' not found. 1 pattern(s) tried: ['(?P<slug>[^/]+)/edit_post$'] ---- https://stackoverflow.com/questions/65309024/reverse-for-edit-post-with-arguments-not-found-1-patterns-tried
+
+18 - Xampp mysql Error: MySQL shutdown unexpectedly - https://stackoverflow.com/questions/18022809/how-to-solve-error-mysql-shutdown-unexpectedly
+
+19 - less_secure_app for email solved - https://youtu.be/rpmfDHCyPbo
+
+20- creating identity using qrcode - https://youtu.be/_vTJpfniqzo
+
+21- creating identity using qrcode2 - https://github.com/RahmankhanA/ID-Card-Generater/blob/main/id_card_generater
+
+22 - convert image to pdf - https://youtu.be/ytVSMin2Wgc
+
+23 - queryset userlist in descending order - https://stackoverflow.com/questions/1470676/how-can-i-tell-the-django-orm-to-reverse-the-order-of-query-results
+
+24 -    ValueError: Unable to find resource t64.exe in package pip._vendor.distlib [follow steps]    -- https://stackoverflow.com/questions/39908406/unable-to-locate-finder-for-pip-vendor-distlib-error-when-using-pip-instal?answertab=trending#tab-top
+        WARNING: There was an error checking the latest version of pip.
+
+25 - docker connect with mysql - https://medium.com/@minghz42/docker-setup-for-django-on-mysql-1f063c9d16a0
+
+26 - send email with attachement - https://stackoverflow.com/questions/33218629/attaching-pdfs-to-emails-in-django
+
+27 - use google-font offline - https://youtu.be/pjWUhHWtLws
+
+
+28 - emmet not working - https://youtu.be/AUuP_hriEc4

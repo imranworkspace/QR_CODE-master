@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- split by div tag -->
+    
+<div class="row">
+        <div class="col-md-12">
+            <h6 class="text-center alert alert-info mt-1 ml-1 mb-2">Update Profile</h6>
+
+            <form action="" method="post" novalidate>
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value="Update Profile" class="btn btn-floating btn-success btn-md btn-sm">
+                <!-- after form edit work completed then redirect to userlist page -->
+                <a href="{% url 'registration' %}" class="btn btn-secondary text-white btn-sm"><-Home</a>
+            </form>
+            <div>
+                {% if message %}
+                    <div class="alert alert-{{class}}">
+                        {{message}}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+</div>
+
+{% endblock content %}

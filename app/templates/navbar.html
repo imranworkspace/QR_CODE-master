@@ -1,0 +1,51 @@
+{% if request.session.flag %}
+  {% url 'admin_dashboard' as admin_dashboard %}
+  {% url 'registration' as registration %}
+  {% url 'userlist' as userlist %}
+  {% url 'sub_admin_list' as sub_admin_list %}
+  {% url 'logout' as logout %}
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a id="roboto" class="nav-link {% if request.path == admin_dashboard %} active {% endif %}" aria-current="page" href="{% url 'admin_dashboard' %}"><i class="fa-solid fa-coffee-bean"></i> Dashboard</a>
+    </li> 
+    <li class="nav-item">
+      <a id="roboto" class="nav-link {% if request.path == registration %} active {% endif %}" aria-current="page" href="{% url 'registration' %}"><i class="fa-solid fa-house"></i> Home</a>
+    </li> 
+    <li class="nav-item">
+      <a id="roboto" class="nav-link {% if request.path == sub_admin_list %} active {% endif %}" href="{% url 'sub_admin_list' %}"><i class="fa-solid fa-users"></i>  Sub-Admins List</a>
+    </li>
+    <li class="nav-item">
+      <a id="roboto" class="nav-link {% if request.path == userlist %} active {% endif %}" href="{% url 'userlist' %}"><i class="fa-solid fa-people-line"></i>  Employees List</a>
+    </li>
+    <li class="nav-item">
+      <a id="roboto" class="nav-link {% if request.path == logout %} active {% endif %}" href="{% url 'logout' %}" tabindex="-1" aria-disabled="true"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+    </li>
+</ul>
+{% else %}
+  {% url 'registration' as registration %}
+  {% url 'userlist' as userlist %}
+  {% url 'change_password' request.session.id as change_password %}
+  {% url 'profile_update' request.session.id as profile_update %}
+  {% url 'logout' as logout %}
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a id="roboto" class="nav-link {% if request.path == registration %} active {% endif %}" aria-current="page" href="{% url 'registration' %}"><i class="fa-solid fa-house"></i> Home</a>
+    </li> 
+    <li class="nav-item">
+      <a id="roboto" class="nav-link {% if request.path == userlist %} active {% endif %}" href="{% url 'userlist' %}"><i class="fa-solid fa-people-line"></i>  Employees List</a>
+    </li>
+    <li class="nav-item">
+      <!-- get id from session to change password redirect -->
+      <a id="roboto"class="nav-link {% if request.path == change_password %} active {% endif %}"  href="{% url 'change_password' request.session.id %}"><i class="fa-solid fa-user-lock"></i> Change Password</a>
+    </li>
+    <li class="nav-item">
+      <a id="roboto" class="nav-link {% if request.path == profile_update %} active {% endif %}"  href="{% url 'profile_update' request.session.id %}"> <i class="fa-solid fa-user-check"></i> Profile Update</a>
+    </li>
+    <li class="nav-item">
+      <a id="roboto" class="nav-link {% if request.path == logout %} active {% endif %}" href="{% url 'logout' %}" tabindex="-1" aria-disabled="true"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+    </li>
+</ul>
+{% endif %}
+
+
+

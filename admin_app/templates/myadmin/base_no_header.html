@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code</title>
+    <link rel = "icon" href ="{% static 'images/novetrics_logo.jpg'%}" type = "image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/fonts/main.css'%}">
+    <link rel="stylesheet" href="{% static 'css/fonts/fonts.css'%}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+    <style>
+        .navbar .logo{
+            font-size: 20px;
+            font-weight: 900px;
+            margin: 0 20px;
+        }
+        .icon-bar{
+            width: 50%;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+
+        }
+        /* styling each icon in Icon bar */
+        .icon-bar a{
+            text-align: center;
+            padding: 20px 30px;
+            font-size: 25;
+        }
+        /* menu styling items */
+        .menu-item{
+            font-size: large;
+            color: blue;
+            padding-top: 5px;
+        }
+        /* mouse hover */
+        .icon-bar a:hover{
+            background-color: rgb(20, 124, 150);
+            color: black;
+        } */
+        .alert-info{
+            color:rgb(68, 68, 223);
+        }
+        .alert-success{
+            color:rgb(9, 117, 9);
+        }
+        .alert-warning{
+            color:rgb(141, 141, 28);
+        }
+        .alert-danger{
+            color:rgb(148, 50, 50);
+        }
+        .errorlist{
+            list-style-type: none;
+            color: red;
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+        }
+        .required:after{
+            content: "*";
+            color: red;
+        }
+        .bg {
+            background: url("/static/images/novetrics_logo.jpg") 50% 0 no-repeat fixed;
+            color: white;
+            height: 50px;
+            padding: 50px 0 0 0;   
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %} {% endblock content %}
+    </div>
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+</body>
+</html>

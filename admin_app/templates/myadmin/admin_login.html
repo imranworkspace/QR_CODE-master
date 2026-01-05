@@ -1,0 +1,32 @@
+{% extends 'myadmin/base2.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="row">
+        <center>
+        <div class="col-sm-6">
+            
+            <h6 class="text-center alert alert-success">Admin Login</h6>
+            <div>
+                {% if message %}
+                    <div class="alert alert-{{class}}">
+                        {{message}}
+                    </div>
+                {% endif %}
+            </div>
+            <form action="" method="post" novalidate>
+                {% csrf_token %}
+                {{form.as_p}}
+                <div class="row">
+                    <div class="col-sm-6">
+                        <input type="submit" class="btn btn-outline-success active" type="button" value="Submit">     
+                    </div> 
+                    <div class="col-sm-6">
+                        <a class="btn btn-outline-danger active"  href="{% url 'admin_home' %}">cancel</a>
+                    </div>  
+                </div>    
+            </form>
+        </div>
+    </center>
+    </div>
+{% endblock content %}

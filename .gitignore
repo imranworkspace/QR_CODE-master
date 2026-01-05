@@ -1,0 +1,9 @@
+qrcode_env
+qrcode_env_314/
+app/__pycache__/
+QR_CODE/__pycache__/
+app/migrations/
+admin_app/__pycache__/
+admin_app/migrations/
+app/templates/__pycache__/
+data/

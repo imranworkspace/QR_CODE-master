@@ -1,0 +1,18 @@
+{% extends 'myadmin/base.html' %}
+{% load static %}
+{% block content %}
+    <!-- split by div tag -->
+    <div class="row">
+        <div class="col-md-8 m-3">
+            <h6 class="text-center alert alert-info">Update SubAdmin</h6>
+            <form action="" method="post" novalidate>
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value="Update Sub-Admin" class="btn btn-floating btn-success btn-md btn-sm">
+                <!-- after form edit work completed then redirect to userlist page -->
+                <a href="{% url 'sub_admin_list' %}" class="btn btn-secondary text-white btn-sm"><- Sub-Admin List</a>
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}

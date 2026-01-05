@@ -1,0 +1,27 @@
+{% extends 'myadmin/base.html' %}
+{% load static %}
+{% block content %}
+<div class="row m-3">
+    <div class="col-md-6">
+        <div class="card" style="width: 32rem;">
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+        <div class="card-body">
+          <h5 class="card-title alert alert-info"><center>Total SubAdmins</center></h5>
+          <center><p class="card-text"><h1>{{admin_count}}</h1></p></center>
+          <center><a href="{% url 'sub_admin_list' %}" class="btn btn-info text-white">see details</a></center>
+        </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card" style="width: 32rem;">
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+        <div class="card-body">
+          <h5 class="card-title alert alert-info"><center>Total Employees</center></h5>
+          <center><p class="card-text"><h1>{{emp_count}}</h1></p></center>
+          <center><a href="{% url 'userlist' %}" class="btn btn-info text-white">see details</a></center>
+        </div>
+        </div>
+    </div>
+    
+</div>
+{% endblock content %}
