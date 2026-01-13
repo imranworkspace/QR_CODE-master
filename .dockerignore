@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+qrcode_env/
+qrcode_env_314/
+db.sqlite3
+.git
