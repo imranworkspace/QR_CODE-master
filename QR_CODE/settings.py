@@ -132,6 +132,9 @@ AUTH_KEY = '378254Aw1grgEXTw62a87f89P1'
 STATIC_URL = '/static/'
 # FOR STATIC IMAGE
 STATICFILES_DIRS=[STATIC_DIR,]
+# Where collectstatic will copy files
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 
 MEDIA_ROOT =  os.path.join(BASE_DIR, '') 
 MEDIA_URL = '/'
