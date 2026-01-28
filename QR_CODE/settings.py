@@ -16,11 +16,11 @@ STATIC_DIR = os.path.join(BASE_DIR / 'static')
 SECRET_KEY = 'django-insecure-jkck*0-nb&uj0tqjnrk@$-&_3wtto90!vn-5&mvu5j)o55ym@!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
-DEBUG = True
+DEBUG = False
+# DEBUG = True
 
 # ALLOWED_HOSTS = ['qrcode-p.herokuapp.com','127.0.0.1:8000']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['18.61.24.219'] # aws public ipv4
 
 
 # Application definition
@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'app',
     'django_filters',
     'admin_app',
+    'storages', # for aws s3 storage
 ]
 
 MIDDLEWARE = [
@@ -168,3 +169,28 @@ EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
 EMAIL_PORT = config('EMAIL_PORT', cast=int)
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+
+
+# aws credentials 
+AWS_ACCESS_KEY_ID = ''       # Leave empty (IAM role)
+AWS_SECRET_ACCESS_KEY = ''   # Leave empty (IAM role)
+
+AWS_STORAGE_BUCKET_NAME = 'qrcode-static-bucket'
+AWS_S3_REGION_NAME = 'ap-south-2'
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+
+STATICFILES_LOCATION = 'static'
+MEDIAFILES_LOCATION = 'media'
+
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+DEFAULT_FILE_STORAGE = 'myproject.storage_backends.MediaStorage'
+STATICFILES_STORAGE = 'myproject.storage_backends.StaticStorage'
+
+
+
