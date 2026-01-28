@@ -20,7 +20,7 @@ DEBUG = False
 # DEBUG = True
 
 # ALLOWED_HOSTS = ['qrcode-p.herokuapp.com','127.0.0.1:8000']
-ALLOWED_HOSTS = ['18.61.24.219'] # aws public ipv4
+ALLOWED_HOSTS = [] 
 
 
 # Application definition
@@ -34,8 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app',
     'django_filters',
-    'admin_app',
-    'storages', # for aws s3 storage
+    'admin_app'
 ]
 
 MIDDLEWARE = [
@@ -129,22 +128,13 @@ USE_TZ = True
 # FOR OTP
 AUTH_KEY = '378254Aw1grgEXTw62a87f89P1'
 
-# STATIC_URL = '/static/'
-
-# # project-level static folder
-# STATIC_DIR = BASE_DIR / 'static'
-
-# STATICFILES_DIRS = [
-#     STATIC_DIR,
-# ]
-
-# STATIC_ROOT = BASE_DIR / 'staticfiles'
-
 STATIC_URL = '/static/'
-STATIC_DIR = BASE_DIR / 'static'
-STATICFILES_DIRS = [STATIC_DIR]
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+# FOR STATIC IMAGE
+STATICFILES_DIRS=[STATIC_DIR,]
 
+MEDIA_ROOT =  os.path.join(BASE_DIR, '') 
+MEDIA_URL = '/'
+    
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
