@@ -129,15 +129,20 @@ USE_TZ = True
 # FOR OTP
 AUTH_KEY = '378254Aw1grgEXTw62a87f89P1'
 
+# STATIC_URL = '/static/'
+
+# # project-level static folder
+# STATIC_DIR = BASE_DIR / 'static'
+
+# STATICFILES_DIRS = [
+#     STATIC_DIR,
+# ]
+
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 STATIC_URL = '/static/'
-
-# project-level static folder
 STATIC_DIR = BASE_DIR / 'static'
-
-STATICFILES_DIRS = [
-    STATIC_DIR,
-]
-
+STATICFILES_DIRS = [STATIC_DIR]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
