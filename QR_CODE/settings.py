@@ -130,14 +130,15 @@ USE_TZ = True
 AUTH_KEY = '378254Aw1grgEXTw62a87f89P1'
 
 STATIC_URL = '/static/'
-# FOR STATIC IMAGE
-STATICFILES_DIRS=[STATIC_DIR,]
-# Where collectstatic will copy files
+
+# project-level static folder
+STATIC_DIR = BASE_DIR / 'static'
+
+STATICFILES_DIRS = [
+    STATIC_DIR,
+]
+
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-
-MEDIA_ROOT =  os.path.join(BASE_DIR, '') 
-MEDIA_URL = '/'
     
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
